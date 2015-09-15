@@ -8,7 +8,7 @@ Summary:	Python plugins for kdevelop
 Summary(pl.UTF-8):	Wtyczki Python dla kdevelop
 Name:		kde4-kdevelop-plugin-python
 Version:	1.7.0
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Development/Tools
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/kdevelop/%{_kdevelopver}/src/%{orgname}-%{version}-py3.tar.xz
