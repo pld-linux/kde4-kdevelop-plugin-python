@@ -1,5 +1,5 @@
 %define		orgname		kdev-python
-%define		_kdevelopver	4.7.0
+%define		_kdevelopver	4.7.1
 %define		_state		stable
 %define		kdever		4.10.0
 %define		qtver		4.8.0
@@ -7,12 +7,12 @@
 Summary:	Python plugins for kdevelop
 Summary(pl.UTF-8):	Wtyczki Python dla kdevelop
 Name:		kde4-kdevelop-plugin-python
-Version:	1.7.0
-Release:	3
+Version:	1.7.1
+Release:	1
 License:	GPL
 Group:		X11/Development/Tools
-Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/kdevelop/%{_kdevelopver}/src/%{orgname}-%{version}-py3.tar.xz
-# Source0-md5:	708e43202056cc241209109b8bbd5bd0
+Source0:	http://download.kde.org/%{_state}/kdevelop/%{_kdevelopver}/src/%{orgname}-%{version}-py3.tar.xz
+# Source0-md5:	f670af81e55bbc68fd3bd0443b0fc34e
 URL:		http://www.kdevelop.org/
 BuildRequires:	QtNetwork-devel >= %{qtver}
 BuildRequires:	automoc4
