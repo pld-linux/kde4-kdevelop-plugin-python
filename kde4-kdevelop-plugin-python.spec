@@ -20,7 +20,6 @@ BuildRequires:	automoc4
 BuildRequires:	cmake
 BuildRequires:	gettext-devel
 BuildRequires:	kde4-kdelibs-devel >= %{kdever}
-BuildRequires:	kde4-kdevelop-pg-qt
 BuildRequires:	kde4-kdevplatform-devel >= %{version}
 BuildRequires:	qt4-build >= %{qtver}
 BuildRequires:	qt4-qmake >= %{qtver}
