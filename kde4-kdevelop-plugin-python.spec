@@ -24,7 +24,7 @@ BuildRequires:	kde4-kdevelop-pg-qt
 BuildRequires:	kde4-kdevplatform-devel >= %{version}
 BuildRequires:	qt4-build >= %{qtver}
 BuildRequires:	qt4-qmake >= %{qtver}
-BuildRequires:	python3-devel >= 3.4.0
+BuildRequires:	python3-devel >= 3.5.0
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.600
 Requires:	kde4-kdevelop >= %{_kdevelopver}
