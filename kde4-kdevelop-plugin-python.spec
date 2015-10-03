@@ -13,6 +13,7 @@ License:	GPL
 Group:		X11/Development/Tools
 Source0:	http://download.kde.org/%{_state}/kdevelop/%{_kdevelopver}/src/%{orgname}-%{version}-py3.tar.xz
 # Source0-md5:	f670af81e55bbc68fd3bd0443b0fc34e
+Patch0:		python-3.5.patch
 URL:		http://www.kdevelop.org/
 BuildRequires:	QtNetwork-devel >= %{qtver}
 BuildRequires:	automoc4
@@ -37,6 +38,10 @@ Wtyczki Python dla kdevelop.
 
 %prep
 %setup -q -n %{orgname}-%{version}-py3
+%patch0 -p1
+
+cd parser
+%{__python3} conversionGenerator.py > generated.h
 
 %build
 install -d build

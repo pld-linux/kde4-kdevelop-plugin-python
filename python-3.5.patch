@@ -1,0 +1,22 @@
+--- kdev-python-1.7.1-py3/parser/CMakeLists.txt~	2015-02-02 15:44:29.000000000 +0100
++++ kdev-python-1.7.1-py3/parser/CMakeLists.txt	2015-10-02 22:14:04.075355827 +0200
+@@ -14,7 +14,7 @@
+ )
+ 
+ find_package(PythonLibs 3.4 REQUIRED)
+-if ( NOT ${PYTHONLIBS_FOUND} OR ${PYTHON_VERSION_MINOR} GREATER 4 )
++if ( NOT ${PYTHONLIBS_FOUND} OR ${PYTHON_VERSION_MINOR} GREATER 5 )
+     message(FATAL_ERROR "Python 3.4 with --enable-shared is required to build kdev-python")
+ endif()
+ 
+--- kdev-python-1.7.1-py3/parser/python34.sdef~	2015-02-02 15:44:29.000000000 +0100
++++ kdev-python-1.7.1-py3/parser/python34.sdef	2015-10-03 09:50:58.347896445 +0200
+@@ -46,7 +46,7 @@
+ RULE_FOR _expr;KIND Yield_kind;ACTIONS create|YieldAst set|value->ExpressionAst,value;;
+ RULE_FOR _expr;KIND Compare_kind;ACTIONS create|CompareAst set|leftmostElement->ExpressionAst,left set|operators#>ComparisonOperatorTypes,ops set|comparands=>ExpressionAst,comparators;;
+ RULE_FOR _expr;KIND Call_kind;ACTIONS create|CallAst set|function->ExpressionAst,func set|arguments=>ExpressionAst,args set|keywords=>KeywordAst,keywords
+-                                                     set|keywordArguments->ExpressionAst,kwargs set|starArguments->ExpressionAst,starargs;CODE v->function->belongsToCall = v;;
++                                                     ;CODE v->function->belongsToCall = v;;
+ RULE_FOR _expr;KIND Num_kind;ACTIONS create|NumberAst;CODE v->isInt = PyLong_Check(node->v.Num.n); v->value = PyLong_AsLong(node->v.Num.n);;
+ RULE_FOR _expr;KIND Str_kind;ACTIONS create|StringAst set|value$>s;;
+ RULE_FOR _expr;KIND Bytes_kind;ACTIONS create|BytesAst set|value$>s;;
