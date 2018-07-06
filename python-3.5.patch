@@ -5,7 +5,7 @@
  
  find_package(PythonLibs 3.4 REQUIRED)
 -if ( NOT ${PYTHONLIBS_FOUND} OR ${PYTHON_VERSION_MINOR} GREATER 4 )
-+if ( NOT ${PYTHONLIBS_FOUND} OR ${PYTHON_VERSION_MINOR} GREATER 6 )
++if ( NOT ${PYTHONLIBS_FOUND} OR ${PYTHON_VERSION_MINOR} GREATER 7 )
      message(FATAL_ERROR "Python 3.4 with --enable-shared is required to build kdev-python")
  endif()
  
