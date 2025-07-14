@@ -37,7 +37,7 @@ Wtyczki Python dla kdevelop.
 
 %prep
 %setup -q -n %{orgname}-%{version}-py3
-%patch0 -p1
+%patch -P0 -p1
 
 cd parser
 %{__python3} conversionGenerator.py > generated.h
